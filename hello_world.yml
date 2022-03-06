@@ -16,5 +16,5 @@
     - name: Hello Message
       debug:
         #the facts are not complete with ansible automation platform runtime
-        msg: "Hello World! - use fact cache: {{ ansible_facts['cmdline']['BOOT_IMAGE'] }} - {{ testpassword }}"
+        msg: "Hello World! - use fact cache: {{ ansible_facts['distribution'] }} - memory total: {{ ansible_facts['memtotal_mb'] }}, memory free: {{ ansible_facts['memfree_mb'] }} - {{ testpassword }}"
 ...
