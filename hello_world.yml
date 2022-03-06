@@ -17,4 +17,7 @@
       debug:
         #the facts are not complete with ansible automation platform runtime
         msg: "Hello World! - use fact cache: {{ ansible_facts['distribution'] }} - memory total: {{ ansible_facts['memtotal_mb'] }}, memory free: {{ ansible_facts['memfree_mb'] }} - {{ testpassword }}"
+    - name: Show variable value from survey
+      debug:
+        msg: "Got survey values: var1 = {{ var1 }}, var2 = {{ var2 }}"
 ...
