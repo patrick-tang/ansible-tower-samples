@@ -1,6 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: all
+  gather_facts: no
   #vars:
   #  connectivity_test_destinations:
   #    - { ip: 192.168.50.2, port: 53, protocol: udp }
@@ -11,5 +12,5 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World! - {{ testpassword }}"
+        msg: "Hello World! - use fact cache: {{ ansible_facts['default_ipv4']['address'] }} total mem: {{ ansible_facts['memtotal_mb'] }} - {{ testpassword }}"
 ...
