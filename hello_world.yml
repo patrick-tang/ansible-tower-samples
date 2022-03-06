@@ -20,4 +20,10 @@
     - name: Show variable value from survey
       debug:
         msg: "Got survey values: var1 = {{ var1 }}, var2 = {{ var2 }}"
+    - name: Set fact
+      set_fact:
+        favorite: "Ilike-{{ var2 }}"
+    - name: Show new fact
+      debug:
+        msg: "Result: i{{ favorite }}"
 ...
