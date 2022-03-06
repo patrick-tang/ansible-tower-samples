@@ -1,9 +1,14 @@
+---
 - name: Hello World Sample
   hosts: all
+  vars:
+    connectivity_test_destinations:
+      - { ip: 192.168.50.2, port: 53, protocol: udp }
   roles:
-    - kennashka.ansible_testing_ping
+    - ryandaniels.connectivity_test
+    #- linux-system-roles.timesync
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
-
+...

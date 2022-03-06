@@ -1,3 +1,4 @@
 roles:
-- name: kennashka.ansible_testing_ping
-  src: kennashka.ansible_testing_ping
+- name: ryandaniels.connectivity_test
+  src: ryandaniels.connectivity_test
+  version: 1.0.0
