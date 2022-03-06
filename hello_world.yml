@@ -1,5 +1,7 @@
 - name: Hello World Sample
   hosts: all
+  roles:
+    - kennashka.ansible_testing_ping
   tasks:
     - name: Hello Message
       debug:
