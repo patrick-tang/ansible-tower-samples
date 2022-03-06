@@ -1,4 +1,4 @@
-roles:
+collections:
 - name: ericsysmin.system
   src: ericsysmin.system
   version: 1.0.0
