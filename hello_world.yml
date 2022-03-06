@@ -1,14 +1,15 @@
 ---
 - name: Hello World Sample
   hosts: all
-  vars:
-    connectivity_test_destinations:
-      - { ip: 192.168.50.2, port: 53, protocol: udp }
-  roles:
-    - ryandaniels.connectivity_test
-    #- linux-system-roles.timesync
+  #vars:
+  #  connectivity_test_destinations:
+  #    - { ip: 192.168.50.2, port: 53, protocol: udp }
+  vars_files:
+     - test-vault-1.yml
+  #roles:
+  #  - ryandaniels.connectivity_test
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!"
+        msg: "Hello World! - {{ testpassword }}"
 ...
