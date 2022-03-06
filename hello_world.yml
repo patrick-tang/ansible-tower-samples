@@ -10,6 +10,9 @@
   #roles:
   #  - ryandaniels.connectivity_test
   tasks:
+    - name: Show facts
+      debug:
+        var: ansible_facts
     - name: Hello Message
       debug:
         msg: "Hello World! - use fact cache: {{ ansible_facts['default_ipv4']['address'] }} total mem: {{ ansible_facts['memtotal_mb'] }} - {{ testpassword }}"
