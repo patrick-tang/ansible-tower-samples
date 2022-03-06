@@ -1,7 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: all
-  gather_facts: no
+  gather_facts: yes
   #vars:
   #  connectivity_test_destinations:
   #    - { ip: 192.168.50.2, port: 53, protocol: udp }
